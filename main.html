@@ -10,7 +10,19 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
+			let [big, secBig] = [-Infinity, -Infinity];
+			for (let x of arr)
+			{
+				if (x > big)
+				{
+					secBig = big;
+					big = x;
+				}
+				else if (x > secBig && x != big)
+				{
+					secBig = x
+				}
+			}
 		}
 
 		function Main() {
